@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form class="row g-3 needs-validation" id="model_params" novalidate>
+
+        <div class="input-group mb-3">
+            <input value="choose file" class="form-control" type="file" name="raw_data_file" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Sheet name</span>
+            <input type="text" class="form-control" name="sheet_name" aria-label="" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">feature column(s)</span>
+            <input type="text" class="form-control" name="feature_columns" aria-label="">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">label column</span>
+            <input type="text" class="form-control" name="label_column" aria-label="">
+         </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">train data ratio</span>
+            <input type="text" class="form-control" name="train_ratio" aria-label="">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">model</span>
+            <select class="form-select" name="model_type" aria-label="">
+                <option value="logistic" selected>LogisticRegression</option>
+                <option value="gbdt">GBDT</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">model params</span>
+            <textarea class="form-control" aria-label="model params" name="model_params_v" required></textarea>
+        </div>
+        <div class="col-12">
+            <input id="submit" type="button" class="btn btn-primary" value="RUN" onclick="request_model('classifier')">
+        </div>
+    </form>
+</body>
+
+</html>

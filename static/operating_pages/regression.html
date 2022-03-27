@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form class="row g-3" id="model_params">
+
+        <div class="input-group mb-3">
+            <input value="choose file" class="form-control" type="file" name="raw_data_file" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Sheet name</span>
+            <input type="text" class="form-control" name="sheet_name" aria-label="">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">feature column(s)</span>
+            <input type="text" class="form-control" name="feature_columns" aria-label="">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">target column</span>
+            <input type="text" class="form-control" name="label_column" aria-label="">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">label column</span>
+            <select class="form-select" name="model_type" aria-label="">
+                <option value="linear" selected>LinearRegression</option>
+                <option value="gbdt">GBDT</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">model params</span>
+            <textarea class="form-control" aria-label="model params" name="model_params_v" required></textarea>
+        </div>
+        <div class="col-12">
+            <input type="button" class="btn btn-primary" value="RUN" onclick="request_model('regression')">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="result_place">
+        <table class="table table-success table-hover">
+            <tbody>
+                <tr>
+                    <th scope="row">result info</th>
+                    <td>{{ msg }}</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">acc</th>
+                    <td>{{ acc }}</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">auc</th>
+                    <td>{{ auc }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">total_sample_cnt</th>
+                    <td>{{ total_sample_cnt }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">train_sample_cnt</th>
+                    <td>{{ train_sample_cnt }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">test_sample_cnt</th>
+                    <td>{{ test_sample_cnt }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">roc line</th>
+                    <td><img :src="img_data" alt="null" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

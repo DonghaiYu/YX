@@ -9,6 +9,7 @@ import tornado.httpclient
 import tornado.httpserver
 
 from lib import base
+from lib import model
 
 
 def run_server(port):
@@ -20,6 +21,7 @@ def run_server(port):
     try:
         app = tornado.web.Application(handlers=[
             (r'/', base.MainHandler),
+            (r'/model', model.ModelHandler),
         ], static_path="static")
         http_server = tornado.httpserver.HTTPServer(app)
         http_server.bind(port, address='0.0.0.0')
