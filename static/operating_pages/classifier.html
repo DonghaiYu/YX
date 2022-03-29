@@ -38,6 +38,11 @@
             <span class="input-group-text">model params</span>
             <textarea class="form-control" aria-label="model params" name="model_params_v" required></textarea>
         </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">Cross-Validation</span>
+            <input type="text" class="form-control" name="cross_validation" aria-label="">
+        </div>
         <div class="col-12">
             <input id="submit" type="button" class="btn btn-primary" value="RUN" onclick="request_model('classifier')">
         </div>
